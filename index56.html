@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estampados Creativos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header, footer {
+      width: 100%;
+      background: linear-gradient(to right, #004080, #00bfff);
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      padding: 1rem;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .section {
+      margin: 2rem 0;
+    }
+
+    .services, .gallery, .why-us {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .card {
+      background: #111;
+      padding: 1rem;
+      border-radius: 8px;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 300px;
+    }
+
+    h2, h3 {
+      color: #ff4747;
+    }
+
+    .footer-text {
+      font-size: 0.8rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Estampados Creativos</h1>
+    <p>Diseña tu mundo, estampa tu estilo</p>
+  </header>
+
+  <div class="container">
+    <section class="section">
+      <h2>Sobre Nosotros</h2>
+      <p>En "Estampados Creativos" nos especializamos en personalizar productos con diseños únicos. Camisetas, mugs, termos y más, todo hecho con dedicación y calidad.</p>
+    </section>
+
+    <section class="section">
+      <h3>Nuestros Servicios</h3>
+      <div class="services">
+        <div class="card">
+          <img src="camisetas.png" alt="Camisetas" width="100%" />
+          <p>Camisetas sublimadas personalizadas</p>
+        </div>
+        <div class="card">
+          <img src="mugs.png" alt="Mugs" width="100%" />
+          <p>Mugs sublimados con tu diseño</p>
+        </div>
+        <div class="card">
+          <img src="termos.png" alt="Termos" width="100%" />
+          <p>Termos digitales personalizados</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>Galería TikTok</h3>
+      <div class="gallery">
+        <div class="card"><iframe src="https://www.tiktok.com/embed/1"></iframe></div>
+        <div class="card"><iframe src="https://www.tiktok.com/embed/2"></iframe></div>
+        <div class="card"><iframe src="https://www.tiktok.com/embed/3"></iframe></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>¿Por qué elegirnos?</h3>
+      <div class="why-us">
+        <div class="card"><h4>Creatividad</h4><p>Diseños originales y personalizados</p></div>
+        <div class="card"><h4>Alta Calidad</h4><p>Materiales duraderos y resistentes</p></div>
+        <div class="card"><h4>Variedad</h4><p>Muchos productos personalizables</p></div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p class="footer-text">© 2025 Estampados Creativos. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
