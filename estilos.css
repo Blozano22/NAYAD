@@ -6,7 +6,7 @@ body {
   padding: 0;
 }
 
-.header {
+/* .header {
   background: linear-gradient(to right,#7FFE90, #00A9F2);
   padding: 2rem;
   text-align: center;
@@ -21,7 +21,121 @@ body {
 .header p {
   margin-top: 0.5rem;
   font-size: 1.2rem;
+} */
+
+/* La barra de encabezado ahora tendrá el pulso */
+.header {
+  background: linear-gradient(to right, #7FFE90, #00A9F2);
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  animation: glow 3s infinite alternate;
 }
+
+/* El rombo del logo se queda fijo, elegante */
+.diamond {
+  /* width: 200px; */
+  height: 137px;
+  background: #fff;
+  margin: 0 auto;
+  transform: rotate(0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  border: 5px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+/* Efecto de borde animado en el rombo */
+.diamond::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #7fff00, #00aaff, #7fff00, #00aaff);
+  background-size: 400% 400%;
+  border-radius: 10px;
+  animation: gradient 6s ease infinite;
+  z-index: -1;
+}
+
+/* El logo dentro del rombo, limpio */
+.diamond img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  transform: rotate(0deg);
+}
+
+/* Animación del borde del rombo */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animación del pulso suave en la barra */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(127, 255, 0, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 40px rgba(0, 169, 242, 0.6);
+  }
+}
+
+
+/* Rombo (solo forma del contenedor) */
+.diamond1 {
+
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* 💎 Da la forma de rombo */
+}
+
+/* Efecto borde animado */
+.diamond1::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #7fff00, #00aaff, #7fff00, #00aaff);
+  background-size: 400% 400%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* 💎 Igual rombo animado */
+  animation: gradient 6s ease infinite;
+  z-index: -1;
+}
+
+/* Logo dentro (derecho y grande) */
+.diamond1 img {
+  width: 220px; /* Mucho más grande */
+  height: 220px;
+  object-fit: contain;
+}
+
+/* Animación del borde rombo */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 .seccion-oscura {
   background-color: #111;
