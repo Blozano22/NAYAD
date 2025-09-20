@@ -69,7 +69,6 @@ body {
 }
 
 /* 🔹 Menú */
-/* 🔹 Menú */
 .nav-bar {
   background: #111;
   border-bottom: 2px solid #00ff44;
@@ -78,15 +77,12 @@ body {
 .nav-bar ul {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;   /* ✅ Permite que los items bajen si no caben */
-  gap: 1rem;         /* Espaciado entre items */
   list-style: none;
   padding: 0.8rem 0;
-  margin: 0;
 }
 
 .nav-bar ul li {
-  margin: 0; /* ❌ quitamos márgenes laterales grandes */
+  margin: 0 1.5rem;
 }
 
 .nav-bar ul li a {
@@ -94,13 +90,12 @@ body {
   font-weight: bold;
   color: #00ff44;
   transition: color 0.3s;
-  padding: 0.5rem 1rem; /* ✅ mejora clic en móvil */
-  display: inline-block;
 }
 
 .nav-bar ul li a:hover {
   color: #fff;
 }
+
 /* 🔹 Banner */
 .hero-banner img {
   width: 100%;
