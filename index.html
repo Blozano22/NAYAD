@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAYAD</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #121212;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    /* Header */
+/* 🔹 Encabezado */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #00ff44, #003300); /* Verde neón → verde oscuro */
+}
+
+    .top-header .logo img { height: 50px; }
+    .search-bar input {
+      width: 220px;
+      padding: 0.4rem;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      background: #1a1a1a;
+      color: #00ff00;
+    }
+
+    /* Nav */
+    .nav-bar {
+      background: #0d0d0d;
+      border-bottom: 2px solid #1a1a1a;
+    }
+    .nav-bar ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0.7rem 0;
+    }
+    .nav-bar ul li { margin: 0 1.5rem; }
+    .nav-bar ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #00ff00;
+      transition: color 0.3s;
+    }
+    .nav-bar ul li a:hover { color: #00aaff; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      color: #fff;
+    }
+    .hero #particles {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #000;
+      z-index: 1;
+    }
+    .hero .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    .hero h1 span { color: #00ff00; }
+    .hero p {
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      color: #aaa;
+    }
+    .hero .btn {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      border-radius: 25px;
+      background: linear-gradient(90deg, #00ff00, #000);
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0px 0px 10px #00ff00;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hero .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 20px #00ff00;
+    }
+
+    /* Secciones */
+    section { padding: 3rem 2rem; text-align: center; }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #00ff00;
+    }
+
+    /* Galería */
+    .galeria .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .galeria .card {
+      background: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.7);
+      padding: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .galeria .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 0.8rem;
+    }
+    .galeria .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 8px 20px rgba(0,255,0,0.6);
+    }
+
+    /* Footer */
+    .footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 2px solid #00ff00;
+    }
+    .footer .redes a {
+      margin: 0 0.5rem;
+      color: #00ff00;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+    .footer .redes a:hover { color: #00aaff; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="top-header">
+    <div class="logo">
+      <img src="./Recurso 3.png" alt="Logo NAYAD">
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar...">
+    </div>
+  </header>
+
+  <!-- Nav -->
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="camisetas.html">Camisetas</a></li>
+      <li><a href="#tazas">Tazas</a></li>
+      <li><a href="termos.html">Termos</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <canvas id="particles"></canvas>
+    <div class="hero-content">
+      <h1>Bienvenido a <span>NAYAD</span></h1>
+      <p>Diseños únicos y personalizados en camisetas, tazas y termos.</p>
+      <a href="#galeria" class="btn">Ver productos</a>
+    </div>
+  </section>
+
+  <!-- Sobre Nosotros -->
+  <section class="sobre-nosotros" id="sobre">
+    <h2>Sobre Nosotros</h2>
+    <p>
+      En <strong>NAYAD</strong> personalizamos productos con diseños únicos.  
+      Desde camisetas y tazas hasta termos digitales.
+    </p>
+  </section>
+
+  <!-- Galería -->
+  <section class="galeria" id="galeria">
+    <h2>Galería de Productos</h2>
+    <div class="grid">
+      <div class="card"><img src="./img/camiseta1.jpeg" alt="Producto"><p>Producto 1</p></div>
+      <div class="card"><img src="./img/camiseta2.jpeg" alt="Producto"><p>Producto 2</p></div>
+      <div class="card"><img src="./img/camiseta3.jpeg" alt="Producto"><p>Producto 3</p></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contacto">
+    <p>© 2025 NAYAD - Todos los derechos reservados.</p>
+    <div class="redes">
+      <a href="https://www.instagram.com/nayad.artesgraficas/" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@nayad.artes.grafi" target="_blank">TikTok</a>
+      <a href="https://wa.me/573234478891" target="_blank">WhatsApp</a>
+    </div>
+  </footer>
+
+  <!-- Partículas -->
+  <script>
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particles = [];
+
+    class Particle {
+      constructor(x, y, dx, dy, size) {
+        this.x = x; this.y = y;
+        this.dx = dx; this.dy = dy;
+        this.size = size;
+        this.color = Math.random() < 0.7 ? "rgba(0,255,0,0.7)" : "rgba(0,170,255,0.6)";
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+      update() {
+        this.x += this.dx;
+        this.y += this.dy;
+        if(this.x < 0 || this.x > canvas.width) this.dx = -this.dx;
+        if(this.y < 0 || this.y > canvas.height) this.dy = -this.dy;
+        this.draw();
+      }
+    }
+
+    function init() {
+      particles = [];
+      for(let i = 0; i < 80; i++) {
+        let size = 2;
+        let x = Math.random() * canvas.width;
+        let y = Math.random() * canvas.height;
+        let dx = (Math.random() - 0.5) * 1;
+        let dy = (Math.random() - 0.5) * 1;
+        particles.push(new Particle(x, y, dx, dy, size));
+      }
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => p.update());
+    }
+
+    init();
+    animate();
+
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      init();
+    });
+  </script>
+
+</body>
+</html>
